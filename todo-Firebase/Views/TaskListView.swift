@@ -10,7 +10,7 @@ import SwiftUI
 
 struct TaskListView: View {
     @ObservedObject var taskListVM = TaskListViewModel()
-    let tasks = testDataTasks
+//    let tasks = testDataTasks
     
     @State var presentAddNewItem = false
     
@@ -40,8 +40,8 @@ struct TaskListView: View {
                 }
                 .padding()
             }
+            .navigationBarTitle("Tasks")
         }
-        .navigationBarTitle("Tasks")
     }
 }
 
