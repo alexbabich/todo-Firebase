@@ -47,7 +47,7 @@ class TaskRepository: ObservableObject {
         do {
             var addedTask = task
             addedTask.userId = Auth.auth().currentUser?.uid
-            let _ = try db.collection("task").addDocument(from: addedTask)
+            let _ = try db.collection("tasks").addDocument(from: addedTask)
         }
         catch {
             fatalError("unable to encode task: \(error.localizedDescription)")
