@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		55B74BCA24B6FACB0073927C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B74BC924B6FACB0073927C /* AppDelegate.swift */; };
 		55B74BCC24B6FACB0073927C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B74BCB24B6FACB0073927C /* SceneDelegate.swift */; };
-		55B74BCE24B6FACB0073927C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B74BCD24B6FACB0073927C /* ContentView.swift */; };
+		55B74BCE24B6FACB0073927C /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B74BCD24B6FACB0073927C /* TaskListView.swift */; };
 		55B74BD024B6FACF0073927C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B74BCF24B6FACF0073927C /* Assets.xcassets */; };
 		55B74BD324B6FACF0073927C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B74BD224B6FACF0073927C /* Preview Assets.xcassets */; };
 		55B74BD624B6FACF0073927C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55B74BD424B6FACF0073927C /* LaunchScreen.storyboard */; };
+		55B74BDF24B6FB140073927C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B74BDE24B6FB140073927C /* Task.swift */; };
+		55B74BE424B70FF00073927C /* TaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B74BE324B70FF00073927C /* TaskCellViewModel.swift */; };
+		55B74BE824B7180F0073927C /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B74BE724B7180F0073927C /* TaskListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		55B74BC624B6FACB0073927C /* todo-Firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "todo-Firebase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55B74BC924B6FACB0073927C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55B74BCB24B6FACB0073927C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		55B74BCD24B6FACB0073927C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		55B74BCD24B6FACB0073927C /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		55B74BCF24B6FACF0073927C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55B74BD224B6FACF0073927C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		55B74BD524B6FACF0073927C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55B74BD724B6FACF0073927C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55B74BDE24B6FB140073927C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		55B74BE324B70FF00073927C /* TaskCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellViewModel.swift; sourceTree = "<group>"; };
+		55B74BE724B7180F0073927C /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +62,10 @@
 		55B74BC824B6FACB0073927C /* todo-Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				55B74BC924B6FACB0073927C /* AppDelegate.swift */,
-				55B74BCB24B6FACB0073927C /* SceneDelegate.swift */,
-				55B74BCD24B6FACB0073927C /* ContentView.swift */,
+				55B74BE224B70FD10073927C /* ViewModels */,
+				55B74BE024B6FBA00073927C /* App */,
+				55B74BDD24B6FAF50073927C /* Model */,
+				55B74BE124B6FBA60073927C /* Views */,
 				55B74BCF24B6FACF0073927C /* Assets.xcassets */,
 				55B74BD424B6FACF0073927C /* LaunchScreen.storyboard */,
 				55B74BD724B6FACF0073927C /* Info.plist */,
@@ -73,6 +80,40 @@
 				55B74BD224B6FACF0073927C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		55B74BDD24B6FAF50073927C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				55B74BDE24B6FB140073927C /* Task.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		55B74BE024B6FBA00073927C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				55B74BC924B6FACB0073927C /* AppDelegate.swift */,
+				55B74BCB24B6FACB0073927C /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		55B74BE124B6FBA60073927C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				55B74BCD24B6FACB0073927C /* TaskListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		55B74BE224B70FD10073927C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				55B74BE324B70FF00073927C /* TaskCellViewModel.swift */,
+				55B74BE724B7180F0073927C /* TaskListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55B74BE824B7180F0073927C /* TaskListViewModel.swift in Sources */,
+				55B74BDF24B6FB140073927C /* Task.swift in Sources */,
 				55B74BCA24B6FACB0073927C /* AppDelegate.swift in Sources */,
 				55B74BCC24B6FACB0073927C /* SceneDelegate.swift in Sources */,
-				55B74BCE24B6FACB0073927C /* ContentView.swift in Sources */,
+				55B74BCE24B6FACB0073927C /* TaskListView.swift in Sources */,
+				55B74BE424B70FF00073927C /* TaskCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
